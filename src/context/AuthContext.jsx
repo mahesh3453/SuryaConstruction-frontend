@@ -3,6 +3,7 @@ import axios from 'axios';
 
 // Ensure session cookies are sent with all axios requests
 axios.defaults.withCredentials = true;
+axios.defaults.baseURL = import.meta.env.VITE_API_BASE_URL || '';
 
 const AuthContext = createContext(null);
 
